@@ -1,0 +1,91 @@
+/* Sidebar Animation */
+nav {
+    transform: translateX(0); /* Assure que la nav est visible par défaut */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Sidebar Button Hover Animation */
+.sidebar-button {
+    transition: all 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+.sidebar-button:hover {
+    background-color: #1F2937;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Button Hover Effect */
+.hover-container {
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    overflow: hidden;
+}
+
+.hover-container .deux,
+.hover-container .first {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover .hover-container .deux,
+button:hover .hover-container .first {
+    transform: translateY(-25px);
+    color: #fff;
+}
+
+/* SVG Rotation */
+button svg {
+    transition: transform 0.4s ease-in-out;
+}
+
+button:hover svg {
+    transform: rotate(180deg);
+}
+
+button:not(:hover) svg {
+    transform: rotate(0deg);
+}
+
+.card {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ======== HOVER GLOW EFFECT SUR LES CARTES ======== */
+.card:hover {
+    transform: scale(1.05) rotate(1deg);
+    background-color: #1F2937;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    color: #4B5563;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.card:hover .card-icon {
+    transform: scale(1.1);
+    color: #60A5FA; /* Bleu néon */
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}

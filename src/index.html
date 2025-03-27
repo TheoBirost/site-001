@@ -9,6 +9,7 @@
 </head>
 <body class="bg-gray-950 text-white flex">
 
+<!-- Sidebar Navigation -->
 <nav class="h-screen w-64 p-4 border-r border-gray-500 hidden md:flex flex-col justify-between">
     <div class="flex justify-center items-center pb-4 pt-2 mb-2">
         <div class="flex items-center space-x-2">
@@ -45,44 +46,65 @@
         </li>
     </ul>
 
-
     <div class="mt-auto">
         <button class="mt-auto w-full">
-            <a href="pagnitation/settings.html" class=" w-full mt-auto bg-gray-800 p-2 rounded-lg hover:bg-gray-700 flex items-center justify-between px-4">
-            <div class="hover-container">
-                <span class="first font-black uppercase">settings</span>
-                <span class="deux font-black uppercase">settings</span>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="26" viewBox="0 0 24 24" fill="none"
-                 stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="lucide lucide-settings">
-                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2
-                         2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2
-                         0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2
-                         0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0
-                         2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2
-                         2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2
-                         2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08
-                         a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-                <circle cx="12" cy="12" r="3"/>
-            </svg>
+            <a href="pagnitation/settings.html" class="w-full mt-auto bg-gray-800 p-2 rounded-lg hover:bg-gray-700 flex items-center justify-between px-4">
+                <div class="hover-container">
+                    <span class="first font-black uppercase">settings</span>
+                    <span class="deux font-black uppercase">settings</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="26" viewBox="0 0 24 24" fill="none"
+                     stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-settings">
+                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
             </a>
         </button>
     </div>
 </nav>
+
+<!-- Mobile Hamburger Button -->
+<div class="md:hidden flex justify-between items-start p-4 border-r border-gray-500">
+    <button id="hamburger-btn" class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+</div>
+
+<!-- Mobile Sidebar -->
+<div id="mobile-nav" class="fixed inset-0   bg-gray-800 bg-opacity-75 z-50 hidden">
+    <div class="flex justify-end p-4">
+        <button id="close-btn" class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="flex justify-center items-center h-full">
+        <ul class="space-y-4 text-center text-xl text-white">
+            <li><a href="pagnitation/page1.html">Page 1</a></li>
+            <li><a href="pagnitation/page2.html">Page 2</a></li>
+            <li><a href="pagnitation/page3.html">Page 3</a></li>
+            <li><a href="pagnitation/page4.html">Page 4</a></li>
+        </ul>
+    </div>
+</div>
 
 <div class="flex-1 mt-2 p-6 rounded-lg shadow-lg">
     <h1 class="text-3xl font-bold mb-6 uppercase text-gray-300 border-b border-gray-500 pb-2">
         Dashboard
     </h1>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
         <div class="card border-2 p-5 border-gray-500 rounded-lg shadow-md">
             <svg xmlns="http://www.w3.org/2000/svg" class="card-icon" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/>
+                <circle cx="9" cy="7" r="4"/>
+                <line x1="19" x2="19" y1="8" y2="14"/>
                 <line x1="22" x2="16" y1="11" y2="11"/>
             </svg>
             <h1 class="card-title py-4">1</h1>
@@ -118,8 +140,23 @@
             <h1 class="card-title py-4">1</h1>
             <h2 class="card-description py-4">Description 1</h2>
         </div>
+
+        <!-- Card 5 -->
+        <div class="card border-2 p-5 border-gray-500 rounded-lg shadow-md">
+            <svg class="card-icon bg-gray-700"></svg>
+            <h1 class="card-title py-4">1</h1>
+            <h2 class="card-description py-4">Description 1</h2>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card border-2 p-5 border-gray-500 rounded-lg shadow-md">
+            <svg class="card-icon bg-gray-700"></svg>
+            <h1 class="card-title py-4">1</h1>
+            <h2 class="card-description py-4">Description 1</h2>
+        </div>
     </div>
 </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const cards = document.querySelectorAll(".card");
@@ -134,8 +171,25 @@
                 }
             });
         }
+
         window.addEventListener("scroll", revealElements);
         revealElements();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sélectionne le bouton hamburger et le menu mobile
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileNav = document.getElementById("mobile-nav");
+        const closeBtn = document.getElementById("close-btn");
+
+        // Lorsque le bouton hamburger est cliqué, afficher le menu mobile
+        hamburgerBtn.addEventListener("click", function () {
+            mobileNav.classList.toggle("hidden");
+        });
+
+        // Lorsque le bouton de fermeture est cliqué, masquer le menu mobile
+        closeBtn.addEventListener("click", function () {
+            mobileNav.classList.add("hidden");
+        });
     });
 </script>
 

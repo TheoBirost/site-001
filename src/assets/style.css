@@ -59,7 +59,7 @@ button:not(:hover) svg {
     opacity: 1;
     transform: translateY(0);
 }
-/* ======== HOVER GLOW EFFECT SUR LES CARTES ======== */
+
 .card:hover {
     transform: scale(1.05) rotate(1deg);
     background-color: #1F2937;
@@ -74,7 +74,7 @@ button:not(:hover) svg {
 }
 .card:hover .card-icon {
     transform: scale(1.1);
-    color: #60A5FA; /* Bleu néon */
+    color: #FFF;
 }
 
 
